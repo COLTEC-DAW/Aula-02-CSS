@@ -1,0 +1,1082 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <title>CSS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=792, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="libs/shower/themes/bright/styles/screen.css">
+	<link rel="stylesheet" href="libs/highlight/styles/default.css">
+	<link rel="stylesheet" type="text/css" href="css/960gs.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <style type="text/css">
+    pre code {
+      font-size: 0.7em;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+    }
+
+    mark.green {
+      background: #8FBC8F;
+    }
+
+    mark.red {
+      background: #CD3333;
+    }
+
+    </style>
+
+  </head>
+  <body class="list">
+    <header class="caption">
+      <h1>CSS</h1>
+      <p>Desenvolvimento de Aplicativos Web - COLTEC/MG</p>
+    </header>
+
+    <section class="slide cover" id="Cover">
+      <div>
+        <h2>CSS</h2>
+        <p>João Eduardo Montandon</p>
+        <p>Desenvolvimento de Aplicativos Web - COLTEC/MG</p>
+        <img src="images/wallpaper_coltec_wide.png" alt="" />
+
+      </div>
+    </section>
+
+    <section class="slide">
+      <div>
+        <h2>O Problema do HTML</h2>
+
+        <ul>
+          <li>
+            A linguagem HTML surgiu para definir a <b>estrutura</b> da sua página
+          </li>
+          <li>
+            Antigamente, o HTML foi incrementado com <em>tags</em> específicas para estilo
+          </li>
+        </ul>
+        <div class="container_12">
+          <div class="grid_8 suffix_2">
+              <b>Resultado:</b> As páginas HTML viraram uma bagunça!!
+          </div>
+          <div class="grid_2">
+            <p class="note">
+              <a href="http://www.nissan.com/">Exemplo</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="slide">
+      <div>
+        <h2>Solução</h2>
+        <p class="note">
+          <b>Solução:</b> Isolar estilo do conteúdo
+        </p>
+        <h1>CSS: <b>C</b>ascading <b>S</b>tyle <b>S</b>heets</h1>
+      </div>
+    </section>
+
+
+    <section class="slide" id="slide_example">
+      <style media="screen">
+        #slide_example ol {
+          margin-bottom: 10px;
+        }
+
+        #slide_example h2 {
+          margin-bottom: 18px;
+        }
+
+        #slide_example code {
+          font-size: 0.65em;
+        }
+      </style>
+      <div>
+        <h2>CSS</h2>
+        <ol>
+          <li>Separação física da estrutura (HTML) e apresentação (CSS)</li>
+          <li>Centralização do código relacionado ao estilo da página</li>
+          <li>Facilidade de manutenção</li>
+          <li>Disponíveis a partir do HTML 4.0</li>
+        </ol>
+        <div class="container_12">
+          <div class="grid_6">
+            <pre><code>
+body {
+  background-color: #ff0;
+}
+div {
+  background-color: #f00;
+  padding: 20px;
+}
+            </code></pre>
+          </div>
+          <div class="grid_6">
+            <iframe src="examples/css_example.html" width="100%" height="100px"></iframe>
+          </div>
+        </div>
+      </div>
+      <div>
+
+      </div>
+    </section>
+
+
+    <section class="slide">
+      <div>
+        <h2>CSS: Sintaxe básica</h2>
+        <div class="container_12">
+          <div class="grid_6">
+            <pre>
+              <code style="font-size: 1.2em;">
+<mark class="red">div</mark> {
+  <mark class="green">color:</mark> <mark class="coment">#f00</mark>;
+  <mark class="green">padding:</mark> <mark class="coment">20px</mark>;
+}
+              </code>
+            </pre>
+          </div>
+          <div class="grid_6">
+            <p><mark class="red">Seletor</mark>: Elemento a ser customizado</p>
+            <p><mark class="green">Atributo</mark>: Propriedade que será alterada</p>
+            <p><mark class="coment">Valor</mark>: Novo valor da propriedade</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="slide">
+
+      <div style="padding-top: 50px;">
+        <div class="container_12">
+          <div class="grid_7">
+            <pre>
+              <code style="font-size:0.43em;">
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Introdução HTML&lt;/title&gt;
+&lt;style type="text/css"&gt;
+h1{
+  text-align: center;
+  font-family: Arial;
+}
+p{
+  font-family: Arial;
+  text-align: justify;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Primeiro Capítulo&lt;/h1&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;h1&gt;Segundo Capítulo&lt;/h1&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+              </code>
+            </pre>
+          </div>
+          <div class="grid_5">
+            <iframe src="examples/css_example_2.html" style="width:130%; height: 400px;"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="slide">
+      <div>
+        <h2>CSS + HTML</h2>
+        <ul>
+          <li>A ligação entre CSS e HTML pode ser feita de três formas principais:</li>
+          <ol>
+            <li><em>Inline</em> (propriedade <code>style</code>)</li>
+            <li><em>Interno</em> (elemento <code>&lt;style&gt;</code>)</li>
+            <li><em>Externo</em> (elemento <code>&lt;link&gt;</code> + arquivo.css)</li>
+          </ol>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="slide">
+      <div>
+        <h2>CSS: inline</h2>
+        Customização é feita dentro do elemento específico
+        <pre>
+          <code>
+    &lt;div style="float: right; width: 60%; display: block;"&gt;
+    &lt;h3&gt;About me&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+    &lt;/div&gt;
+          </code>
+        </pre>
+      </div>
+    </section>
+
+
+    <section class="slide">
+      <div>
+        <h2>CSS: Interno</h2>
+        Deve estar dentro da tag <code>&lt;style&gt;</code>, que por sua vez deve
+        estar dentro do header da página
+        <pre>
+          <code style="font-size:0.5em;">
+  &lt;head&gt;
+  &lt;title&gt;Introdução HTML&lt;/title&gt;
+  &lt;style type="text/css"&gt;
+
+  h1{
+    text-align: center;
+    font-family: Arial;
+  }
+
+  p{font-family: Arial;}
+  &lt;/style&gt;
+  &lt;/head&gt;
+          </code>
+        </pre>
+      </div>
+    </section>
+
+
+    <section class="slide">
+      <div>
+        <h2>CSS: Externo</h2>
+        <ul style="font-size:0.8em;">
+          <li>As informações de estilo devem ser armazenadas em uma folha de
+            estilo separadamente (.css)</li>
+          <li>No arquivo HTML, deve-se referenciar essa folha de estilo através
+            da tag <code>&lt;link&gt;</code></li>
+        </ul>
+        <div class="container_12">
+          <div class="grid_6">
+            <pre style="font-size: 0.8em;">
+              <code>
+h1{
+  text-align: center;
+  font-family: Arial;
+}
+
+p{font-family: Arial;}
+              </code>
+            </pre>
+          </div>
+          <div class="grid_6">
+            <pre style="font-size: 0.8em;">
+              <code>
+&lt;head&gt;
+&lt;title&gt;Introdução HTML&lt;/title&gt;
+<mark class="coment">&lt;link rel="stylesheet" type="text/css"
+    href="estilo.css"&gt;</mark>
+&lt;/head&gt;
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="slide">
+      <div>
+        <h2>CSS: id e class</h2>
+        <ul>
+          <li>O CSS também permite atribuir estilos para elementos específicos ou para um grupo de elementos</li>
+          <li>Elementos específicos: através do termo <code>#id</code></li>
+          <li>Grupos de elementos: através do termo <code>.class</code></li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="slide">
+      <div class="container_12" style="padding-top: 10px; height: 600px;">
+        <h2 style="margin-bottom:18px;">CSS: id</h2>
+        <div class="grid_6">
+          <div class="container_12">
+            <div class="grid_12">
+              <pre>
+                <code>
+&lt;h1 id="titulo"&gt;Título
+  do Livro&lt;/h1&gt;
+                </code>
+              </pre>
+            </div>
+            <div class="grid_12">
+              <pre>
+                <code>
+h1{
+  text-align: center;
+  font-family: Arial;
+}
+p{font-family: Arial;}
+#titulo {
+  text-align: center;
+  font-family: cursive;
+}
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+        <div class="grid_6">
+          <iframe src="examples/css_example_id.html" style="width:100%; height: 500px;"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>CSS: class</h2>
+        <div class="grid_6">
+          <div class="container_12">
+            <div class="grid_12">
+              <pre>
+                <code>
+&lt;h1 class="center"&gt;Center-aligned
+  heading&lt;/h1&gt;
+&lt;p class="center"&gt;Center-aligned
+  paragraph.&lt;/p&gt;
+                </code>
+              </pre>
+            </div>
+            <div class="grid_12">
+              <pre>
+                <code>
+.center {
+  text-align: center;
+}
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+        <div class="grid_6">
+          <iframe src="examples/css_example_class.html" style="width:100%; height: 200px;"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="slide">
+      <div>
+        <h2>CSS: Principais Propriedades</h2>
+        <div class="container_12" style="font-size:0.8em">
+          <div class="grid_4">
+            <ul>
+              <li><b>Background</b></li>
+              <ul>
+                <li>background-color</li>
+                <li>background-image</li>
+              </ul>
+              <li><b>Fontes</b></li>
+              <ul>
+                <li>font-family</li>
+                <li>font-style</li>
+                <li>font-size</li>
+              </ul>
+              <li><b>Bordas</b></li>
+              <ul>
+                <li>border-style</li>
+                <li>border-width</li>
+              </ul>
+            </ul>
+          </div>
+          <div class="grid_4">
+            <ul>
+              <li><b>Margens</b></li>
+              <ul>
+                <li>margin-top</li>
+                <li>margin-left</li>
+                <li>margin-right</li>
+                <li>margin-bottom</li>
+              </ul>
+              <li><b>Posição</b></li>
+              <ul>
+                <li>left</li>
+                <li>right</li>
+                <li>center</li>
+              </ul>
+            </ul>
+          </div>
+          <div class="grid_4">
+            <ul>
+              <li><b>Dimensão</b></li>
+              <ul>
+                <li>height</li>
+                <li>width</li>
+                <li>max-height</li>
+                <li>max-widht</li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <header class="caption">
+      <h1>CSS: Seletores</h1>
+      <p>Desenvolvimento de Aplicativos Web - COLTEC/MG</p>
+    </header>
+
+
+    <section class="slide cover">
+      <div>
+        <h2>CSS: Seletores</h2>
+        <p>João Eduardo Montandon</p>
+        <p>Desenvolvimento de Aplicativos Web - COLTEC/MG</p>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div>
+        <h2>CSS: Identificando o que estilizar</h2>
+        <p>
+          Estilizar no CSS nem sempre é facil...
+        </p>
+        <dl style="text-align: center;">
+          <dd><em>"Os links para pdfs deverão aparecer com o símbolo de pdf"</em></dd>
+          <dd><em>"O 1º elemento de dentro da div deverá ter uma altura de 120 pixels."</em></dd>
+          <dd><em>"A primeira letra do primeiro parágrafo do capítulo deverá ter destaque"</em></dd>
+        </dl>
+        <p style=" margin-top: 40px; text-align: center; font-size: 1.8em;">
+          #comofas?
+        </p>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div>
+        <h2>CSS: Identificando o que estilizar</h2>
+        <p>
+          Os seletores CSS fornecem <a href="https://www.youtube.com/watch?v=0D8i8QGgz0k">poderosos</a> meios para estilização dos elementos:
+        </p>
+        <ul>
+          <li>Todos os elementos</li>
+          <li>Grupos de elementos</li>
+          <li>Elementos que possuem determinado atributo</li>
+          <li>etc, etc..</li>
+        </ul>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Seletores: Elementos</h2>
+        <p>
+          Método básico de estilização
+        </p>
+        <div class="grid_6">
+          <pre>
+            <code>
+h1 {
+  text-align: center;
+  color: red;
+}
+            </code>
+          </pre>
+        </div>
+        <div class="grid_6">
+          <iframe src="examples/selector_basic.html"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Seletores: <code>#id</code></h2>
+        <p>
+          Utilizado para estilizar um elemento em específico na página
+        </p>
+        <div class="grid_6">
+          <pre>
+            <code>
+#header {
+  font-family: arial;
+  color: grey;
+  font-size: 20px;
+}
+            </code>
+          </pre>
+        </div>
+        <div class="grid_6">
+          <iframe src="examples/selector_id.html" width="" height=""></iframe>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Seletores: <code>.class</code></h2>
+        <p>
+          Utilizado para estilizar um grupo específico de elementos na página
+        </p>
+        <div class="grid_6">
+          <pre>
+            <code>
+.center {
+  text-align: center;
+}
+            </code>
+          </pre>
+        </div>
+        <div class="grid_6">
+          <iframe src="examples/selector_class.html"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Seletores: grupos de elementos</h2>
+        <p>
+          Permite estilizar vários elementos distintos
+        </p>
+        <div class="grid_6">
+          <pre>
+            <code>
+h1, h2, h3, h4, h5, h6 {
+  color: red;
+}
+            </code>
+          </pre>
+        </div>
+        <div class="grid_6">
+          <iframe src="examples/selector_group.html" style="height: 200px;"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Seletores: <code>*</code></h2>
+        <p>
+          Seletor universal: estiliza todos os elementos
+        </p>
+        <div class="grid_6">
+          <pre>
+            <code>
+* {
+  font-weight: bold;
+  font-style: italic;
+}
+            </code>
+          </pre>
+        </div>
+        <div class="grid_6">
+          <iframe src="examples/selector_universal.html" style="height: 200px;"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Seletores Descendentes</h2>
+        <p>
+          Permite estilizar elementos com base na hierarquia da página
+        </p>
+        <div class="grid_6">
+          <pre>
+            <code>
+.noticia {
+    background-color: yellow;
+}
+
+.noticia p {
+  color: green;
+}
+            </code>
+          </pre>
+        </div>
+        <div class="grid_6">
+          <iframe src="examples/selector_descendent.html"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Seletores: Filhos</h2>
+        <p>
+          Estiliza elementos que são filhos de um determinado elemento
+        </p>
+        <div class="grid_6">
+          <pre>
+            <code>
+body &gt; p {
+  text-style: italic;
+}
+
+p {
+  text-style: bold;
+}
+            </code>
+          </pre>
+        </div>
+        <div class="grid_6">
+          <iframe src="examples/selector_child.html"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Seletores adjacentes</h2>
+        <p style="margin-bottom: 10px;">
+          Estiliza elementos vizinhos entre si
+        </p>
+        <div class="grid_6">
+          <pre>
+            <code>
+h2+p{
+  font-size: 24px;
+  color:grey
+}
+            </code>
+          </pre>
+        </div>
+        <div class="grid_6">
+          <iframe src="examples/selector_adjacent.html" style="height: 300px;"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div>
+        <h2>Pseudo-seletores</h2>
+        <p>
+          Algumas vezes desejamos estilizar partes de uma página web que não repesentam um elemento em si (primeira linha, eventos, etc.).
+        </p>
+        <p>
+          O CSS fornece um conjunto de seletores para detectar a ocorrência de tais situações
+        </p>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div>
+        <h2>Pseudo-seletores: links</h2>
+        <ul>
+          <li><code>a:link</code>: Aplica o estilo a links que não foram visitados pelo usuário ainda</li>
+          <li><code>a:visited</code>: Estiliza links que já foram visitados</li>
+          <li><code>a:hover</code>: Aplicado quando usuário passa o mouse sobre o elemento</li>
+          <li><code>a:active</code>: Aplica o estilo no momento em que o usuário clica no link</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Pseudo-seletores: link</h2>
+        <div class="grid_6">
+          <pre style="font-size: 0.8em;">
+            <code>a:link {
+    color: green;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: yellow;
+}
+            </code>
+          </pre>
+        </div>
+        <div class="grid_6">
+          <iframe src="examples/selector_link.html" ></iframe>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Pseudo-seletores: Parágrafos</h2>
+        <ul>
+          <li><code>:first-letter</code>: Aplica o estilo na primeira letra do parágrafo</li>
+          <li><code>:first-line</code>: Aplica o estilo na primeira linha</li>
+        </ul>
+        <div class="grid_6">
+          <pre>
+            <code>
+p:first-letter {
+  font-size: 30px;
+}
+            </code>
+          </pre>
+        </div>
+        <div class="grid_6">
+          <iframe src="examples/selector_p.html"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Pseudo-seletores: <code>:before</code> &amp; <code>:after</code></h2>
+        Adiciona conteúdo antes e depois do elemento
+        <div class="grid_6">
+          <pre style="font-size: 0.8em;">
+            <code>.quote:before {
+  content: '\201C';
+  font-size: 30px;
+}
+
+.quote:after {
+  content: '\201D';
+  font-size:30px;
+  float: right;
+  margin-top: 10px;
+}
+            </code>
+          </pre>
+        </div>
+        <div class="grid_6">
+          <iframe src="examples/selector_before_after.html" width="" height=""></iframe>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Pseudo-seletores: <code>:first-child</code></h2>
+        <p>
+          Estiliza o primeiro filho de um determinado elemento
+        </p>
+        <div class="grid_6">
+          <pre>
+            <code>
+li:first-child {
+  font-weight: bold;
+}
+            </code>
+          </pre>
+        </div>
+        <div class="grid_6">
+          <iframe src="examples/selector_first_child.html"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Pseudo-seletores: <code>:focus</code></h2>
+        <p>
+          Estiliza um elemento quando ele ganha destaque na página (click, <em>tabbing</em>)
+        </p>
+        <div class="grid_6">
+          <pre>
+            <code>
+input:focus {
+  box-shadow: 3px 3px 5px #888888;
+}
+            </code>
+          </pre>
+        </div>
+        <div class="grid_6">
+          <iframe src="examples/selector_focus.html" width="" height=""></iframe>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Seletores: Atributos</h2>
+        <p>
+          Permite que os elementos a serem estilizados sejam selecionados por meio de seus atributos.
+        </p>
+        <div class="grid_7">
+          <pre>
+            <code style="font-size: 0.7em;">a[href$=".pdf"] {
+  background-image: url("pdf-icon.gif") ;
+  background-repeat: no-repeat;
+  padding-left:17px;
+}
+            </code>
+          </pre>
+        </div>
+        <div class="grid_5">
+          <iframe src="examples/selector_attr.html"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+<header class="caption">
+      <h1>CSS: Page Layout</h1>
+      <p>Desenvolvimento de Aplicativos Web - COLTEC/MG</p>
+    </header>
+
+    <section class="slide cover">
+      <div>
+        <h2>CSS: Page Layout</h2>
+        <p>João Eduardo Montandon</p>
+        <p>Desenvolvimento de Aplicativos Web - COLTEC/MG</p>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div>
+        <h2>Introdução</h2>
+        <p>
+          Um bom layout de página é fundamental para uma boa experiência de navegação do usuário.
+        </p>
+        <ul>
+          <li>Qual seu público alvo?</li>
+          <li>Qual tipo de informação sua página vai ter?</li>
+          <li>Em quais dispositivos ela será visualizada?</li>
+        </ul>
+        <p class="note">
+          Quais as técnicas de layout existentes atualmente?
+        </p>
+      </div>
+    </section>
+
+
+    <section class="slide">
+      <div class="">
+        <h2>Introdução</h2>
+        <p>
+          Algumas das técnias mais utilizadas:
+        </p>
+        <ul>
+          <li>Layout Fixo</li>
+          <li>Layout Fluído</li>
+          <li>Layout Elástico</li>
+          <li>Layout Híbrido</li>
+        </ul>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Layout Fixo <span><a href="examples/fixed_layout.html">Exemplo</a></span></h2>
+        <p>
+          Layout que possui dimensões fixas, geralmente definidas em pixels.
+        </p>
+        <div class="grid_6">
+          Pros:
+          <ul>
+            <li>Controle total do desenvolvedor sobre a página</li>
+          </ul>
+        </div>
+        <div class="grid_6">
+          Cons:
+          <ul>
+            <li>Rigidez do layout</li>
+            <li>Ideal apenas em situações que contemplam a resolução definida</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Layout Fluído <span><a href="examples/fluid_layout.html">Exemplo</a></span></h2>
+        <p>
+          As dimensões da página são definidas em %, permitindo que sua visualização acompanhe qualquer tela.
+        </p>
+        <div class="grid_6">
+          Pros:
+          <ul>
+            <li>Layout pode se adaptar automaticamente em várias telas</li>
+          </ul>
+        </div>
+        <div class="grid_6">
+          Cons:
+          <ul>
+            <li>Em um modelo multicoluna, a visualização fica comprometida em telas pequenas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div>
+        <h2>Layout Elástico <span><a href="examples/elastic_layout.html">Exemplo</a></span></h2>
+        <p>
+          Este layout define o tamanho dos componentes com base no tamanho da fonte do browser.
+        </p>
+        <p>
+          Isto é, o browser mantem uma largura fixa, porém essa largura é baseada no tamanho da fonte rendererizada pelo Browser.
+        </p>
+        <p>
+          Pros &amp; Cons: As mesmas de um layout fixo
+        </p>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div>
+        <h2>Layout Híbrido <span><a href="examples/hybrid_layout.html">Exemplo</a></span></h2>
+        <p>
+          Layout fluído, porém com um limite máximo para largura. O layout da página é medida em colunas, e sua fluidez se baseia na manipulação dessas colunas
+        </p>
+        <p>
+          Ténica mais utilizada atualmente, uma das bases para <em>Responsive Design</em>
+        </p>
+      </div>
+    </section>
+
+
+
+
+    <section class="slide">
+      <div>
+        <h2>Criando um layout híbrido <span><a href="examples/columns.css">Exemplo</a></span></h2>
+        <p>
+          Para se criar um layout híbrido, deve-se seguir os seguintes passos:
+        </p>
+        <ol>
+          <li>Definir o número de colunas que a página irá suportar</li>
+          <li>Definir o espaçamento entre as colunas</li>
+          <li>Implementar um estilo para o container da página</li>
+          <li>Implementar um estilo para cada uma das colunas</li>
+          <li>Utilizar as colunas nos div's da página</li>
+        </ol>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div>
+        <h2 style="margin-bottom: 18px;">Técnica: One True Layout</h2>
+        <p style="margin-bottom: 18px;">
+          Ao se utilizar um layout em colunas, geralmente encontramos problema ao nivelar colunas de cores distintas:
+        </p>
+        <iframe src="examples/hybrid_layout.html" style="width: 100%; height: 300px;"></iframe>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div>
+        <h2>Técnica: One True Layout</h2>
+        <p>
+          <b>O que está Acontecendo?</b>  Os elementos em HTML calculam sua altura com base no conteúdo que possuem.
+        </p>
+        <p>
+          <b>Solução:</b> Ajustar a altura dos elementos filhos de forma que eles alcancem o elemento pai.
+        </p>
+      </div>
+    </section>
+
+
+
+    <section class="slide">
+      <div class="container_12">
+        <h2>Técnica: One True Layout <span><a href="examples/faux_columns.html">Resultado</a></span></h2>
+
+        <div class="grid_6">
+          <pre>
+            <code>
+.container {
+  overflow: hidden;
+}
+
+
+.col_1, col_2, col_3, ..., col_n {
+  padding-bottom: 99999px;
+  margin-bottom: -99999px;
+}
+            </code>
+          </pre>
+        </div>
+        <div class="grid_6">
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="slide">
+      <div>
+        <h2>Referências</h2>
+          <p>
+            CSS: The missing manual; McFarland, David; O'Reilly; 2009 - 2a Edição
+          </p>
+          <p>
+            CSS Avançado; Joseph R. Lewis e Meitar Moskovitz; Novatec; 2010
+          </p>
+          <p>
+            <a href="http://www.w3schools.com/css">w3Schools: CSS Basics</a>
+          </p>
+      </div>
+    </section>
+
+    <p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>
+
+    <div class="progress"><div></div></div>
+    <script src="libs/shower/shower.min.js"></script>
+    <script src="libs/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
