@@ -430,6 +430,189 @@ p{font-family: Arial;}
     </section>
 
 
+<!-- ================================= PARTE: BOX MODEL ================================= -->
+
+    <header class="caption">
+      <h1>CSS: Box Model</h1>
+      <p>Desenvolvimento de Aplicativos Web - COLTEC/MG</p>
+    </header>
+    <section class="slide cover">
+      <div>
+        <h2>CSS: Box Model</h2>
+        <p>João Eduardo Montandon</p>
+        <p>Desenvolvimento de Aplicativos Web - COLTEC/MG</p>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>Introdução</h2>
+        <p>Todo elemento HTML é visualizado como uma "caixa" pelo navegador</p>
+        <ul>
+          <li>Bordas</li>
+          <li>Espaçamento interno</li>
+          <li>Espaçamento externo</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="container_12">
+        <h2>Introdução</h2>
+        <p><b>Box Model:</b> "Caixa" que envolve o conteúdo dos elementos HTML da página</p>
+        <div class="grid_6">
+          <ul>
+            <li><code>content</code></li>
+            <li><code>padding</code></li>
+            <li><code>border</code></li>
+            <li><code>margin</code></li>
+          </ul>
+        </div>
+        <div class="grid_6">
+          <img src="images/boxmodel-image.png" alt="" style="max-width: 80%">
+        </div>
+        
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2><code>Margin</code></h2>
+        <p>Espaçamento externo entre o elemento e a página</p>
+        <p>Os valores podem ser dados em:</p>
+        <ul>
+          <li>Percentual</li>
+          <li>Fixo: <code>px</code>, <code>cm</code>, <code>pt</code></li>
+          <li><code>inherit</code></li>
+          <li><code>auto</code></li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="container_12">
+        <h2><code>Margin</code></h2>
+        <div class="row">
+          <div class="grid_5">
+            <pre>
+              <code>
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  margin-left: 8px;
+}
+              </code>
+            </pre>
+          </div>
+          <div class="grid_7">
+            <iframe src="examples/margin.html" style="width:100%; height: 200px;"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2><code>Border</code></h2>
+        <p>Permite customizar a o estilo, largura, e cor da borda do elemento</p>
+        <ul>
+          <li>border-style</li>
+          <li>border-width</li>
+          <li>border-color</li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="container_12">
+        <h2><code>Border</code></h2>
+        <div class="row">
+          <div class="grid_5">
+            <pre>
+              <code>
+p {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-right-style: dotted;
+  border-left-style: dotted;
+  
+  border-color: darkgreen;
+  
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+}
+              </code>
+            </pre>
+          </div>
+          <div class="grid_7">
+            <iframe src="examples/border.html" style="width:100%; height: 250px;"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2><code>Padding</code></h2>
+        <p>Espaçamento interno entre a borda do elemento e seu próprio conteúdo</p>
+        <p>Os valores podem ser dados em:</p>
+        <ul>
+          <li>Percentual</li>
+          <li>Fixo: <code>px</code>, <code>cm</code>, <code>pt</code></li>
+          <li><code>inherit</code></li>
+          <li><code>auto</code></li>
+        </ul>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="container_12">
+        <h2><code>Padding</code></h2>
+        <div class="row">
+          <div class="grid_5">
+            <pre>
+              <code>
+div {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+              </code>
+            </pre>
+          </div>
+          <div class="grid_7">
+            <iframe src="examples/padding.html" style="width:100%; height: 350px;"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide">
+      <div class="container_12">
+        <h2>Largura & Altura</h2>
+        <div class="row">
+          <div class="grid_6">
+            <p>Qual é a largura do elemento?</p>
+            <pre>
+              <code>
+div {
+    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0; 
+}
+              </code>
+            </pre>
+          </div>
+          <div class="grid_6">
+            <iframe src="examples/width.html" style="width:100%; height: 300px;"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="slide">
+      <div>
+        <h2>Largura & Altura</h2>
+        <p><code>element width = width + left padding + right padding + left border + right border</code></p>
+        <p><code>element height = height + top padding + bottom padding + top border + bottom border</code></p>
+      </div>
+    </section>
+
+<!-- ================================================= PARTE: SELETORES ====================================================== -->
+
     <header class="caption">
       <h1>CSS: Seletores</h1>
       <p>Desenvolvimento de Aplicativos Web - COLTEC/MG</p>
