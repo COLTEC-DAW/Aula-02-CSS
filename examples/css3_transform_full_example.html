@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style media="screen">
+      div {
+        width: 50px;
+        height: 50px;
+        background: yellow;
+        margin: 3px;
+      }
+
+      #div1 {
+        -ms-transform: translate(70px,0px); /* IE 9 */
+        -webkit-transform: translate(70px,0px); /* Chrome, Safari, Opera */
+        transform: translate(70px,0px);
+      }
+
+      #div2 {
+        margin-left: 50px;
+        -ms-transform: scale(3,1.0); /* IE 9 */
+        -webkit-transform: scale(3,1.0); /* Chrome, Safari, Opera */
+        transform: scale(3,1.0);
+        background: green;
+      }
+
+      #div3 {
+        margin-left: 20px;
+        margin-top:10px;
+        -ms-transform: skew(30deg,20deg); /* IE 9 */
+        -webkit-transform: skew(30deg,20deg); /* Chrome, Safari, Opera */
+        transform: skew(30deg,20deg);
+        background:red;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="div1">
+      div1
+    </div>
+    <div id="div2">
+      div2
+    </div>
+    <div id="div3">
+      div3
+    </div>
+
+  </body>
+</html>
