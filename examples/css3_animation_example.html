@@ -6,22 +6,24 @@ div {
   width: 100px;
   height: 100px;
   background: red;
-  -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera */
+  -webkit-animation: myfirst 0.5s; /* Chrome, Safari, Opera */
   -webkit-animation-iteration-count: infinite;
-  animation: myfirst 5s;
+  animation: myfirst 0.5s;
   animation-iteration-count: infinite;
 }
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes myfirst {
-  from {background: red;}
-  to {background: yellow;}
+  0% {background: red;}
+  50% {background: black;}
+  100% {background: red;}
 }
 
 /* Standard syntax */
 @keyframes myfirst {
-  from {background: red;}
-  to {background: yellow;}
+  0% {background: red;}
+  50% {background: black;}
+  100% {background: red;}
 }
 </style>
 </head>
